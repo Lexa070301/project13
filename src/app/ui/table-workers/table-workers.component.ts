@@ -28,8 +28,8 @@ export class TableWorkersComponent implements OnInit {
     this.editWorker.emit(id);
   }
 
-  onSaveWorker(id: number, name: string, surname: string) {
-    let arr = [id, name, surname];
+  onSaveWorker(id: number, name: string, surname: string, phone: string) {
+    let arr = [id, name, surname, phone];
     this.saveWorker.emit(arr);
   }
 }

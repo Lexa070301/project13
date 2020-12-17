@@ -10,6 +10,7 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
   title = 'Список сотрудников';
   workers: MyWorker[] = MyWorkersDatabase;
@@ -40,6 +41,9 @@ export class AppComponent {
     }
     if (this.workers[index].surname.trim() == '') {
       this.workers[index].surname = 'Default surname';
+    }
+    if (this.workers[index].phone.trim() == '') {
+      this.workers[index].phone = 'Default +7(999)999-99-99';
     }
     if (index !== -1) {
       this.workers[index].bool = true;
